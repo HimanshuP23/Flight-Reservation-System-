@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Search</title>
+    <style>
+        /* Gradient background styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #005AA7, #FFFDE4); /* Blue to light yellow gradient */
+            color: #333;
+        }
+
+        /* Form container styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.85); /* Light semi-transparent background */
+            backdrop-filter: blur(10px); /* Blurred backdrop */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Header styling */
+        h2 {
+            color: #005AA7;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Table and input fields styling */
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            width: 100%;
+            background: linear-gradient(135deg, #005AA7, #00C6FF); /* Blue gradient */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button hover effect */
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #004080, #0099FF);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Flight Search Form</h1>
+        <h2>Hello, "+user.getFirstName()+" "+user.getLastName()+"</h2>
+        <form action="flightSearch" method="post">
+            <table>
+                <tr>
+                    <td><label for="deptcity">Departure City:</label></td>
+                    <td><input type="text" id="deptcity" name="deptcity" placeholder="Enter departure city" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="destcity">Destination City:</label></td>
+                    <td><input type="text" id="destcity" name="destcity" placeholder="Enter destination city" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="departuredate">Departure Date:</label></td>
+                    <td><input type="date" id="departuredate" name="departuredate" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Search Flights" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

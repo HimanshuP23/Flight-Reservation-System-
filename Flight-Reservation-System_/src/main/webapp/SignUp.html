@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airline User Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gradient background similar to Welcome Page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #005AA7, #FFFDE4);
+            color: #333;
+        }
+
+        /* Form container styling to match Welcome Page */
+        .register-container {
+            background-color: rgba(255, 255, 255, 0.85); /* Light semi-transparent background */
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Form title with gradient text */
+        .register-container h2 {
+            background: linear-gradient(to right, #005AA7, #00C6FF); /* Blue gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        /* Input fields styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus {
+            border-color: #005AA7;
+        }
+
+        /* Button container styling */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Button styling with gradients */
+        .button-container input[type="submit"],
+        .button-container a {
+            display: inline-block;
+            width: 48%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container input[type="submit"] {
+            background: linear-gradient(135deg, #6a11cb, #00C6FF);
+        }
+
+        .button-container a {
+            background: linear-gradient(135deg, #005AA7, #00C6FF);
+        }
+
+        /* Hover effect for buttons */
+        .button-container input[type="submit"]:hover {
+            background: linear-gradient(135deg, #5b0faf, #0099FF);
+        }
+
+        .button-container a:hover {
+            background: linear-gradient(135deg, #004080, #0099FF);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Airline User Registration Form</h2>
+        
+        <form action="SignUp" method="post">
+            <label for="first-name">Enter First Name</label>
+            <input type="text" id="first-name" name="fn" required />
+
+            <label for="last-name">Enter Last Name</label>
+            <input type="text" id="last-name" name="ln" required />
+
+            <label for="email">Enter Email</label>
+            <input type="email" id="email" name="em" required />
+
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" name="pass" required />
+
+            <label for="dob">Select DOB</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <div class="button-container">
+                <input type="submit" value="Sign Up" />
+                <a href="login.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
